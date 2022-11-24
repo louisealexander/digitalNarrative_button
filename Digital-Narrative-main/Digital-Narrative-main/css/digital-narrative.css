@@ -1,0 +1,257 @@
+/* universal selector */
+*{
+    margin: 0;
+    user-select: none;
+}
+body{
+    background-color:#FBECD9;
+}
+/* a div that contains each element of the webpage */
+#container{
+    /* sets the display to flex, child elements automatically align like columns or rows with auto width and auto height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    display: inline-block;
+    height: 100vh;
+    font-family: "Bagerich";
+    font-weight: 400;
+    font-size: 4rem;
+}
+/* styling for the width and height for each narrative section */
+.scroll-element{
+    width: 100%;
+    height: 100vh;
+}
+/* styling for the title page */
+#title-page{
+    background-image: url(../images/muchTitlePAge.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    font-family: "Bagerich";
+    color: #64250E;
+    font-weight: 400;
+}
+#title-page h1{
+    font-size: 90px;
+}
+#title-page p{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Bagerich;
+    font-size: 40px;
+    color: white;
+    background-color: #556E59;
+    width: 500px;
+    border-radius: 15px;
+}
+#main-title{
+    font-size: 70px;
+}
+#date-title{
+    font-family: Bagerich;
+    font-size: 50px;
+}
+.page-title{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Bagerich;
+    font-size: 90px;
+}
+#main-image{
+    width: 85%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+/* styling for the row */
+.row{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* styling for the flex-image class */
+.flex-image{
+    width: 100%;
+    border-radius: 15px;
+}
+/* styling for each column */
+.column{
+    margin-left: 20px;
+    margin-right: 20px;
+    /* divides page into 3 */
+    width: calc(100/3); 
+    flex: 1;
+    font-size: 0;
+}
+.column p{
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #64250E;
+    border-radius: 15px;
+    padding: 15px;
+}
+/* styling for section 1 - Macdonalds */
+#section-1{
+    color: #64250E;
+}
+#section-1 p{
+    background-color: #C3BCD2;
+}
+#col1 p{
+    margin-bottom: 20px;
+}
+#macdonald1{
+    margin-bottom: 25px;
+}
+#macdonald2{
+    margin-bottom: 10px;
+}
+#col3 p{
+    margin-bottom: 10px;
+}
+/* styling for section 2 - Mackintosh */
+#section-2{
+    background-color: #FBECD9;
+    color: #64250E;
+}
+#section-2 p{
+    background-color: #78c9ce;
+}
+#col4 p{
+    margin-bottom: 30px;
+}
+#water-sprite{
+    margin-bottom: 65px;
+}
+#col6 p{
+    margin-bottom: 10px;
+}
+/* styling for section 3 - Klimt */
+#section-3{
+    background-color: #FBECD9;
+    color: #64250E;
+}
+#section-3 p{
+    background-color: #E8C664;
+}
+#klimt2{
+    margin-bottom: 20px;
+}
+#col8-text1{
+    margin-bottom: 25px;
+}
+#adele-klimt{
+    margin-bottom: 25px;
+}
+/* styling for section 4 - Beardsley */
+#section-4{
+    background-color: #FBECD9;
+    color: #64250E;
+}
+#col11 p{
+    background-color: white;
+    margin-bottom: 25px;
+}
+#col12 p{
+    background-color: white;
+}
+#beardsley8{
+    margin-bottom: 5px;
+}
+/* styling for section 5 - Mucha */
+#section-5{
+    background-color: #FBECD9;
+    color: #64250E;
+}
+#col14 p{
+    background-color: #B1BFAD;
+}
+#col4-text1{
+    margin-bottom: 45px;
+}
+#col4-text2{
+    margin-bottom: 45px;
+}
+#mucha4{
+    margin-bottom: 55px;
+}
+/* button */
+#myBtn{
+    z-index: 1;
+}
+/* importing a typeface to use for the headers */
+@font-face {
+    font-family: "Bagerich";
+    src: url("../fonts/FontsFree-Net-Bagerich.ttf");
+}
+/* the page will be invisible until scrolled over */
+.js-scroll{
+    opacity: 0;
+}
+/* makes the animations smoother by easing them in */
+.scrolled.fade-in{
+    animation: fade-in 1.5s ease-in-out both;
+}
+.scrolled.slide-left{
+    animation: slide-in-left 1.5s ease-in-out both;
+}
+.scrolled.slide-right{
+    animation: slide-in-right 1.5s ease-in-out both;
+}
+.scrolled.slide-bottom{
+    animation: slide-in-bottom 1.5s ease-in-out both;
+}
+/* KEYFRAME ANIMATIONS */
+/* Sets translations across the page for animations */
+/* fade in animation */
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* slide in from right animation */
+@keyframes slide-in-right {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* slide in from left animation */
+@keyframes slide-in-left {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* slide in from bottom animation */
+@keyframes slide-in-bottom {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
